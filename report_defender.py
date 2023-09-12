@@ -78,6 +78,13 @@ def get_defended_vms():
     return result
 
 def main():
+    """
+    Iterate through all dictionaries in vm_from_inventory list and compare
+    value of id element  
+    with value of _id elemenment in each dictionaries in the list vms_defend
+    if match, pop the dictionary from the vm_from_inventory list, then
+    print out the remain 
+    """
     vms_from_inventory = get_inventory_vms()
     vms_defended = get_defended_vms()
 
@@ -85,4 +92,3 @@ def main():
         for d in vms_defended:
             if vm.id == d._id:
                 vms_from_inventory[].pop()
-                
